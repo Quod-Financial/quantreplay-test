@@ -267,6 +267,7 @@ class TickCommand : public detail::ReplyingCommand {
  public:
   TickCommand(event::Tick event,
               OrderEventHandler& order_handler,
+              MarketDataPublisher& market_data_publisher,
               ClientNotificationCache& cache);
 
   TickCommand(const TickCommand&) = delete;
@@ -283,6 +284,7 @@ class TickCommand : public detail::ReplyingCommand {
 
   event::Tick tick_;
   OrderEventHandler& order_handler_;
+  MarketDataPublisher& market_data_publisher_;
 };
 
 class PhaseTransitionCommand : public detail::ReplyingCommand {

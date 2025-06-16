@@ -158,7 +158,10 @@ auto MatchingEngine::Implementation::create_notify_client_disconnected_command(
 
 auto MatchingEngine::Implementation::create_tick_command(event::Tick event)
     -> command::TickCommand {
-  return {event, order_system_facade_, cached_client_notifications_};
+  return {event,
+          order_system_facade_,
+          market_data_facade_,
+          cached_client_notifications_};
 }
 
 auto MatchingEngine::Implementation::create_phase_transition_command(

@@ -190,12 +190,17 @@ auto NotifyClientDisconnected::name() const -> std::string_view {
 
 TickCommand::TickCommand(event::Tick event,
                          OrderEventHandler& order_handler,
+                         MarketDataPublisher& market_data_publisher,
                          ClientNotificationCache& cache)
     : detail::ReplyingCommand(cache),
       tick_(event),
-      order_handler_(order_handler) {}
+      order_handler_(order_handler),
+      market_data_publisher_(market_data_publisher) {}
 
-auto TickCommand::execute() const -> void { order_handler_.handle(tick_); }
+auto TickCommand::execute() const -> void {
+  order_handler_.handle(tick_);
+  market_data_publisher_.publish();
+}
 
 auto TickCommand::name() const -> std::string_view { return "Tick"; }
 

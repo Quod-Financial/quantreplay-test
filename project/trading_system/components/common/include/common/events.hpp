@@ -14,6 +14,8 @@ struct Tick {
   core::tz_us tz_tick_time;
   bool is_new_sys_day = false;
   bool is_new_tz_day = false;
+
+  bool operator==(const Tick& rhs) const = default;
 };
 
 struct PhaseTransition {

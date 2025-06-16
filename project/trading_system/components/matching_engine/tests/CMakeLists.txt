@@ -17,6 +17,7 @@ add_target_tests(
     tools/protocol_test_tools.hpp
   UNIT_TESTS
     unit_tests/commands/phase_transition_command_tests.cpp
+    unit_tests/commands/tick_command_tests.cpp
     unit_tests/common/data/market_data_updates_tests.cpp
     unit_tests/common/validation/checker_utils_tests.cpp
     unit_tests/common/validation/conclusion_tests.cpp
