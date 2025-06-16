@@ -19,6 +19,8 @@ struct Tick {
 struct PhaseTransition {
   core::tz_us tz_time_point;
   Phase phase;
+
+  bool operator==(const PhaseTransition& rhs) const = default;
 };
 
 }  // namespace simulator::trading_system::event

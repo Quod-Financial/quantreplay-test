@@ -163,7 +163,10 @@ auto MatchingEngine::Implementation::create_tick_command(event::Tick event)
 
 auto MatchingEngine::Implementation::create_phase_transition_command(
     event::PhaseTransition event) -> command::PhaseTransitionCommand {
-  return {event, order_system_facade_, cached_client_notifications_};
+  return {event,
+          order_system_facade_,
+          market_data_facade_,
+          cached_client_notifications_};
 }
 
 }  // namespace simulator::trading_system::matching_engine

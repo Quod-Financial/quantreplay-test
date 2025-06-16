@@ -289,6 +289,7 @@ class PhaseTransitionCommand : public detail::ReplyingCommand {
  public:
   PhaseTransitionCommand(event::PhaseTransition phase_transition,
                          OrderEventHandler& order_handler,
+                         MarketDataPublisher& market_data_publisher,
                          ClientNotificationCache& cache);
 
   PhaseTransitionCommand(const PhaseTransitionCommand&) = delete;
@@ -309,6 +310,7 @@ class PhaseTransitionCommand : public detail::ReplyingCommand {
 
   event::PhaseTransition phase_transition_;
   OrderEventHandler& order_handler_;
+  MarketDataPublisher& market_data_publisher_;
 };
 
 }  // namespace simulator::trading_system::matching_engine::command

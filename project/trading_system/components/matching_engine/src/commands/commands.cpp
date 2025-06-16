@@ -202,13 +202,16 @@ auto TickCommand::name() const -> std::string_view { return "Tick"; }
 PhaseTransitionCommand::PhaseTransitionCommand(
     event::PhaseTransition phase_transition,
     OrderEventHandler& order_handler,
+    MarketDataPublisher& market_data_publisher,
     ClientNotificationCache& cache)
     : detail::ReplyingCommand(cache),
       phase_transition_(phase_transition),
-      order_handler_(order_handler) {}
+      order_handler_(order_handler),
+      market_data_publisher_(market_data_publisher) {}
 
 auto PhaseTransitionCommand::execute() const -> void {
   order_handler_.handle(phase_transition_);
+  market_data_publisher_.publish();
 }
 
 auto PhaseTransitionCommand::name() const -> std::string_view {

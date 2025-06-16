@@ -3,10 +3,12 @@ add_target_tests(
   HEADERS
     actions/save_copy_constructible.hpp
     mocks/event_listener_mock.hpp
+    mocks/market_data_publisher_mock.hpp
     mocks/mock_client_notification_listener.hpp
     mocks/mock_execution_reports_listener.hpp
     mocks/mock_market_entry_id_generator.hpp
     mocks/mock_order_id_generator.hpp
+    mocks/order_event_handler_mock.hpp
     mocks/trading_reply_receiver_mock.hpp
     tools/fake_depth_node.hpp
     tools/matchers.hpp
@@ -14,6 +16,7 @@ add_target_tests(
     tools/order_test_tools.hpp
     tools/protocol_test_tools.hpp
   UNIT_TESTS
+    unit_tests/commands/phase_transition_command_tests.cpp
     unit_tests/common/data/market_data_updates_tests.cpp
     unit_tests/common/validation/checker_utils_tests.cpp
     unit_tests/common/validation/conclusion_tests.cpp
