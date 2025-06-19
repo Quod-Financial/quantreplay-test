@@ -401,5 +401,5 @@ databaseChangeLog:
             columns:
               - column:
                   name: random_orders_enabled
-                  valueBoolean: false
+                  valueBoolean: true
             where: listing_id=3

@@ -65,27 +65,6 @@ databaseChangeLog:
       id: market_simulator_sample_data_demo_xetra_venue_4
       author: dnovak
       labels: sample-data,xetra,demo,v4
-      comment: Set support_timesales
-      preConditions:
-        - onFail: MARK_RAN
-        - tableExists:
-            tableName: venue
-        - columnExists:
-            tableName: venue
-            columnName: support_timesales
-      changes:
-        - update:
-            tableName: venue
-            columns:
-              - column:
-                  name: support_timesales
-                  valueBoolean: true
-            where: venue_id='XETRA'
-
-  - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_5
-      author: dnovak
-      labels: sample-data,xetra,demo,v4
       comment: Set support_tif_ioc
       preConditions:
         - onFail: MARK_RAN
@@ -104,7 +83,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_6
+      id: market_simulator_sample_data_demo_xetra_venue_5
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set support_tif_fok
@@ -125,7 +104,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_7
+      id: market_simulator_sample_data_demo_xetra_venue_6
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set support_tif_day
@@ -146,7 +125,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_8
+      id: market_simulator_sample_data_demo_xetra_venue_7
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set include_own_orders
@@ -167,7 +146,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_9
+      id: market_simulator_sample_data_demo_xetra_venue_8
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set rest_port
@@ -188,7 +167,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_10
+      id: market_simulator_sample_data_demo_xetra_venue_9
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set order_on_startup
@@ -209,7 +188,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_11
+      id: market_simulator_sample_data_demo_xetra_venue_10
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set random_party_count
@@ -230,7 +209,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_12
+      id: market_simulator_sample_data_demo_xetra_venue_11
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set tns_enabled
@@ -251,7 +230,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_13
+      id: market_simulator_sample_data_demo_xetra_venue_12
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set tns_qty_enabled
@@ -272,7 +251,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_14
+      id: market_simulator_sample_data_demo_xetra_venue_13
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set tns_side_enabled
@@ -293,7 +272,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_15
+      id: market_simulator_sample_data_demo_xetra_venue_14
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set tns_parties_enabled
@@ -314,7 +293,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_16
+      id: market_simulator_sample_data_demo_xetra_venue_15
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set timezone
@@ -335,7 +314,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_17
+      id: market_simulator_sample_data_demo_xetra_venue_16
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set cancel_on_disconnect
@@ -356,7 +335,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_18
+      id: market_simulator_sample_data_demo_xetra_venue_17
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Set persistence_enabled
@@ -377,7 +356,7 @@ databaseChangeLog:
             where: venue_id='XETRA'
 
   - changeSet:
-      id: market_simulator_sample_data_demo_xetra_venue_19
+      id: market_simulator_sample_data_demo_xetra_venue_18
       author: dnovak
       labels: sample-data,xetra,demo,v4
       comment: Add persistence_file_path column into venue table
@@ -396,5 +375,3 @@ databaseChangeLog:
                   name: persistence_file_path
                   value: 
             where: venue_id='XETRA'
-
-
