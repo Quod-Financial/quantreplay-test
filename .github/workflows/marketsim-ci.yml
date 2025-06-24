@@ -158,11 +158,11 @@ jobs:
             SAFE_TAG="${GITHUB_REF_NAME}"
           fi
 
-          BASE_TAG="ghcr.io/${GITHUB_REPOSITORY}/deploy_marketsim:$SAFE_TAG"
+          BASE_TAG="ghcr.io/quod-financial/deploy_marketsim:$SAFE_TAG"
           echo "DEPLOY_IMAGE_FULL_TAG=$BASE_TAG" >> "$GITHUB_ENV"
 
           if [[ "$SAFE_TAG" == "master" && "${GITHUB_EVENT_NAME}" == "push" && "${GITHUB_REF}" != refs/tags/* ]]; then
-            echo "DEPLOY_IMAGE_FULL_TAG=ghcr.io/${GITHUB_REPOSITORY}/deploy_marketsim:latest,$BASE_TAG" >> "$GITHUB_ENV"
+            echo "DEPLOY_IMAGE_FULL_TAG=ghcr.io/quod-financial/deploy_marketsim:latest,$BASE_TAG" >> "$GITHUB_ENV"
           fi
 
       - name: Build and Push Deploy Image
