@@ -12,6 +12,8 @@ COPY template/ /template/
 
 COPY package/quod /market-simulator/quod
 
+RUN chmod +x /market-simulator/quod/bin/marketsimulator
+
 # Remove specific files from the cfg folder
 RUN rm -f /market-simulator/quod/cfg/market_simulator.xml \
     && rm -f /market-simulator/quod/cfg/configSim.txt
