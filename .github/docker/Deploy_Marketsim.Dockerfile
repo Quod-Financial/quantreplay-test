@@ -16,9 +16,9 @@ COPY package/quod /market-simulator/quod
 RUN rm -f /market-simulator/quod/cfg/market_simulator.xml \
     && rm -f /market-simulator/quod/cfg/configSim.txt
 
-COPY script/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY script/entrypoint_os.sh /entrypoint_os.sh
+RUN chmod +x /entrypoint_os.sh
 
 WORKDIR /market-simulator/quod
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint_os.sh"]
