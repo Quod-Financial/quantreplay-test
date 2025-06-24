@@ -1,0 +1,52 @@
+# Ignore all directories, and all sub-directories, and it's contents:
+
+*/*
+# Now ignore all files in the current directory. This fails to ignore files without a ".".
+# For example 'file.txt' works, but 'file' doesn't.
+
+*.*
+
+# But don't ignore these specific directories and subdirectories:
+
+!/conan
+!/hooks
+!/test
+!/script
+
+# But don't ignore these specific files:
+
+!CMakeLists.txt
+!CMakePresets.json
+
+!**.cpp
+!**.hpp
+!**.cmake
+!**.sh
+!**.yml
+!**.yml.example
+!**.txt
+!**.py
+!**.properties
+!**.json
+!**.xml
+!**.err
+!**.Dockerfile
+
+# ...even if they are in subdirectories
+!*/
+
+# But make git ignore all cmake dev build directories,
+cmake-build-*/
+
+# cmake dev install directories,
+cmake-install-*/
+
+# and local development environment
+devenv/*
+
+# Ignore PySys output files
+**/Output/**
+.idea/*
+
+# Ignore Python virtual environment
+env/*

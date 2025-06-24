@@ -1,0 +1,26 @@
+add_target_tests(
+  TARGET ${PROJECT_NAME}
+  HEADERS
+    mocks/generator_service.hpp
+    mocks/order_book_service.hpp
+    mocks/redirector.hpp
+    mocks/resolver.hpp
+    mocks/trading_admin_receiver_mock.hpp
+    mocks/venue_accessor.hpp
+    utils/test_server.hpp
+  UNIT_TESTS
+    unit_tests/controllers/trading_controller_test.cpp
+    unit_tests/headers/x_api_version_tests.cpp
+    unit_tests/marshalling/json/detail/test_enumeration_resolver.cpp
+    unit_tests/marshalling/json/detail/test_key_resolver.cpp
+    unit_tests/marshalling/json/detail/test_marshaller.cpp
+    unit_tests/marshalling/json/detail/test_unmarshaller.cpp
+    unit_tests/marshalling/json/halt_unmarshalling_test.cpp
+    unit_tests/marshalling/json/test_datasource_marshalling.cpp
+    unit_tests/marshalling/json/test_listing_marshalling.cpp
+    unit_tests/marshalling/json/test_price_seed_marshalling.cpp
+    unit_tests/marshalling/json/test_setting_marshalling.cpp
+    unit_tests/marshalling/json/test_venue_marshalling.cpp
+    unit_tests/redirect/test_destination_resolver.cpp
+    unit_tests/redirect/test_redirection_processor.cpp
+    unit_tests/redirect/test_request_redirector.cpp)
