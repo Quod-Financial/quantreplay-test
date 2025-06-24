@@ -110,7 +110,6 @@ jobs:
           cp -r release-with-debug-info-build/bin/marketsimulator package/quod/bin/
           cp -r cfg package/quod/
           cp -r db package/quod/
-          cp -r script/launch_liquibase.sh package/quod/script/
           ls -la package/quod
 
       - name: Upload Package Artifact
