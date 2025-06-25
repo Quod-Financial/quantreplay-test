@@ -17,7 +17,6 @@ on:
   workflow_dispatch:
 
 env:
- # BUILDER_IMAGE: ghcr.io/quod-financial/build_marketsim:v0.1
   DEPLOY_IMAGE_BASE: ghcr.io/quod-financial/deploy_marketsim
 
 jobs:

@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-# set -x
-
 CONFIG_FILE="/market-simulator/quod/data/cfg/market_simulator.xml"
 TEMPLATE_DIR="/template"
 DATA_DIR="/market-simulator/quod/data"
-
-# cp -r /template/* /market-simulator/quod/data/
 
 INSTANCE_ID=${INSTANCE_ID:-"SIMULATOR"}
 PREFIX=${PREFIX:-"QUOD"}
