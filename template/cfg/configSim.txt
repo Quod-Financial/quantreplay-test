@@ -1,6 +1,6 @@
 [DEFAULT]
 ConnectionType=acceptor
-SocketAcceptPort=9001
+SocketAcceptPort=9051
 SocketReuseAddress=Y
 SocketNodelay=Y
 AppDataDictionary=/market-simulator/quod/data/cfg/default/FIX50SP2_marketsimulator.xml
