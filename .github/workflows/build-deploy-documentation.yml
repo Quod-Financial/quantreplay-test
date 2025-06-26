@@ -15,13 +15,14 @@ jobs:
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 'head'
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: Install dependencies
         run: |
-          gem install asciidoctor
-          gem install asciidoctor-pdf
+          gem install asciidoctor -v 2.0.23
+          gem install asciidoctor-pdf -v 2.3.19
+          gem rouge -v 4.5.1
 
       - name: Convert AsciiDoc to HTML
         run: |
