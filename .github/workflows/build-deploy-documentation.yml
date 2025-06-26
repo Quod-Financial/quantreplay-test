@@ -2,7 +2,7 @@ name: Build and Deploy AsciiDoc Docs to GitHub Pages
 
 on:
   push:
-    branches: [develop]  # or your default branch
+    branches: [develop_pages]  # or your default branch
 
 jobs:
   build-and-deploy:
