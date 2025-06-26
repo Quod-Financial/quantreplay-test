@@ -22,6 +22,7 @@
 !**.hpp
 !**.cmake
 !**.sh
+!**.bat
 !**.yml
 !**.yml.example
 !**.txt
@@ -30,6 +31,12 @@
 !**.json
 !**.xml
 !**.err
+!**.ico
+!**.png
+!**.html
+!**.adoc
+!**.pdf
+!**.odt
 !**.Dockerfile
 
 # ...even if they are in subdirectories

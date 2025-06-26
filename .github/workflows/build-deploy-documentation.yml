@@ -1,0 +1,48 @@
+name: Build and Deploy AsciiDoc Docs to GitHub Pages
+
+on:
+  push:
+    branches: [develop]  # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 'head'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install asciidoctor
+          gem install asciidoctor-pdf
+
+      - name: Convert AsciiDoc to HTML
+        run: |
+          cd docs/
+          cp common/favicon.ico .
+          cp common/favicon.ico Overview
+          cp common/favicon.ico FIXRulesOfEngagement
+          cp common/favicon.ico RESTAPI
+          asciidoctor "Overview/Overview.adoc" -o "Overview/Overview.html"
+
+          asciidoctor "FIXRulesOfEngagement/FIXRulesOfEngagement.adoc" -o "FIXRulesOfEngagement/FIXRulesOfEngagement.html"
+          asciidoctor-pdf -a allow-uri-read -a pdf-theme="common/pdf/PDFTheme.yml" "FIXRulesOfEngagement/FIXRulesOfEngagement.adoc" -D "FIXRulesOfEngagement"
+
+          asciidoctor "RESTAPI/RESTAPI.adoc" -o "RESTAPI/RESTAPI.html"
+          asciidoctor-pdf -a allow-uri-read -a pdf-theme="common/pdf/PDFTheme.yml" "RESTAPI/RESTAPI.adoc" -D "RESTAPI"
+
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          force_orphan: true      # without it there will be an error "fatal: Remote branch gh-pages not found in upstream origin"
+
