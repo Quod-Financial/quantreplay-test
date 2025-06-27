@@ -10,27 +10,29 @@
 
 !/conan
 !/hooks
-!/test
 !/script
+!/test
 
 # But don't ignore these specific files:
 
 !CMakeLists.txt
 !CMakePresets.json
+!README.md
 
-!**.cpp
-!**.hpp
 !**.cmake
+!**.cpp
+!**.Dockerfile
+!**.err
+!**.hpp
+!**.json
+!**.png
+!**.properties
+!**.py
 !**.sh
+!**.txt
+!**.xml
 !**.yml
 !**.yml.example
-!**.txt
-!**.py
-!**.properties
-!**.json
-!**.xml
-!**.err
-!**.Dockerfile
 
 # ...even if they are in subdirectories
 !*/
