@@ -11,8 +11,8 @@ HeartBtInt=30
 
 [SESSION]
 BeginString=FIXT.1.1
-SenderCompID=MktSimulator
-TargetCompID=QuodGateway
+SenderCompID=SIM_XETRA
+TargetCompID=CLIENT_XETRA
 DefaultApplVerID=9
 PersistMessages=Y
 FileStorePath=/market-simulator/quod/data/files_store_path_common
