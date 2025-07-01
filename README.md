@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image1.png" width="1015" height="386" style="max-width: 5%; height: auto;" alt="Quant Replay Logo">
+    <img src="images/image1.png" width="800" alt="Quant Replay Logo">
   </a>
   <br>
   <br>
