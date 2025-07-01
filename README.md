@@ -27,7 +27,7 @@ QuantReplay is an open-source market simulator suite that you can host yourself,
 
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image3.png" width="636" height="441" style="max-width: 100%; height: auto;">
+    <img src="images/image3.png" width="636">
   </a>
   <br>
 </div>
