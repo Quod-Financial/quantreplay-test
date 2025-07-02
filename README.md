@@ -54,12 +54,12 @@ These features can be used in different trading and execution scenarios.
       <th>Training AI/ML Models for Smart Order Routing (SOR)</th>
     </tr>
     <tr>
-      <td style="vertical-align: top">You want to evaluate a new mean-reversion strategy before deploying it to a live trading system.</td>
-      <td style="vertical-align: top">You want to test how changes in market connectivity or order routing affect latency-sensitive strategies.</td>
-      <td style="vertical-align: top">You want to train and evaluate a reinforcement learning model that makes real-time order placement decisions across multiple venues.</td>
+      <td valign="top">You want to evaluate a new mean-reversion strategy before deploying it to a live trading system.</td>
+      <td valign="top">You want to test how changes in market connectivity or order routing affect latency-sensitive strategies.</td>
+      <td valign="top">You want to train and evaluate a reinforcement learning model that makes real-time order placement decisions across multiple venues.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top"><b>How it works:</b>
+      <td valign="top"><b>How it works:</b>
          <ul>
              <li>You write a trading algorithm using the simulator’s API.</li>
              <li>Historical market data (e.g., equities or FX tick data) is fed into the simulator.</li>
@@ -69,7 +69,7 @@ These features can be used in different trading and execution scenarios.
              <li>Performance metrics like PnL, Sharpe ratio, max drawdown, and trade volume are generated in real time.</li>
          </ul>
       </td>
-      <td style="vertical-align: top"><b>How it works:</b>
+      <td valign="top"><b>How it works:</b>
          <ul>
              <li>The simulator recreates a high-frequency trading environment with configurable latency profiles, order book depth, and market microstructure.</li>
              <li>You simulate various network and co-location scenarios.</li>
@@ -77,7 +77,7 @@ These features can be used in different trading and execution scenarios.
              <li>The simulator provides logs and metrics for event timestamps, order acknowledgment latency, and execution time.</li>
          </ul>
       </td>
-      <td style="vertical-align: top"><b>How it works:</b>
+      <td valign="top"><b>How it works:</b>
          <ul>
              <li>The simulator provides a multi-venue market with dynamic spreads, liquidity, and volatility.</li>
              <li>The RL agent interacts with the simulated market to place orders based on state features (e.g., LOB depth, time, last fill).</li>
@@ -87,13 +87,13 @@ These features can be used in different trading and execution scenarios.
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top"><b>Benefit:</b><br>
+      <td valign="top"><b>Benefit:</b><br>
          Enables robust validation of trading strategies without the cost and risk of real-world execution.
       </td>
-      <td style="vertical-align: top"><b>Benefit:</b><br>
+      <td valign="top"><b>Benefit:</b><br>
          Offers a safe and reproducible environment to optimize infrastructure for low-latency trading.
       </td>
-      <td style="vertical-align: top"><b>Benefit:</b><br>
+      <td valign="top"><b>Benefit:</b><br>
          Enables AI model development for complex market environments without requiring proprietary exchange access or production-grade setups.
       </td>
     </tr>
