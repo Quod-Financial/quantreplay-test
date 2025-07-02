@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image1.png" width="300" alt="Quant Replay Logo">
+    <img src="images/image1.png" width="1015" height="386" style="max-width: 40%; height: auto;" alt="Quant Replay Logo">
   </a>
   <br>
   <br>
@@ -13,7 +13,7 @@ A realistic market simulator for testing and building better trading strategies.
 
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image2.png" alt="Build. Validate. Replay. Quant Replay: The Open-Source Multi-Asset Market Simulator. Built by Quod Financial. Open to the Industry" width="830">
+    <img src="images/image2.png" alt="Build. Validate. Replay. Quant Replay: The Open-Source Multi-Asset Market Simulator. Built by Quod Financial. Open to the Industry" width="1073" height="373" style="max-width: 100%; height: auto;">
   </a>
   <br>
 </div>
@@ -27,7 +27,7 @@ QuantReplay is an open-source market simulator suite that you can host yourself,
 
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image3.png">
+    <img src="images/image3.png" width="636" height="441" style="max-width: 100%; height: auto;">
   </a>
   <br>
 </div>

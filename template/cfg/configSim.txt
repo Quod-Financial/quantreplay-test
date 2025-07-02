@@ -16,15 +16,5 @@ TargetCompID=CLIENT_XETRA
 DefaultApplVerID=9
 PersistMessages=Y
 FileStorePath=/market-simulator/quod/data/files_store_path_common
-ResetOnLogon=N
-RefreshOnLogon=Y
-
-[SESSION]
-BeginString=FIXT.1.1
-SenderCompID=MktSimulator
-TargetCompID=QuodFeedhandler
-DefaultApplVerID=9
-PersistMessages=N
-FileStorePath=/market-simulator/quod/data/files_store_path_common
 ResetOnLogon=Y
 RefreshOnLogon=N
