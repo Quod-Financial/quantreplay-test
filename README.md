@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image1.png" width="1015" height="386" style="max-width: 40%; height: auto;" alt="Quant Replay Logo">
+    <img src="images/image1.png" width="300" alt="Quant Replay Logo">
   </a>
   <br>
   <br>
@@ -13,7 +13,7 @@ A realistic market simulator for testing and building better trading strategies.
 
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image2.png" alt="Build. Validate. Replay. Quant Replay: The Open-Source Multi-Asset Market Simulator. Built by Quod Financial. Open to the Industry" width="1073" height="373" style="max-width: 100%; height: auto;">
+    <img src="images/image2.png" alt="Build. Validate. Replay. Quant Replay: The Open-Source Multi-Asset Market Simulator. Built by Quod Financial. Open to the Industry" width="830">
   </a>
   <br>
 </div>
@@ -27,7 +27,7 @@ QuantReplay is an open-source market simulator suite that you can host yourself,
 
 <div align="center">
   <a href="https://www.quodfinancial.com/">
-    <img src="images/image3.png" width="636" height="441" style="max-width: 100%; height: auto;">
+    <img src="images/image3.png">
   </a>
   <br>
 </div>
@@ -54,12 +54,12 @@ These features can be used in different trading and execution scenarios.
       <th>Training AI/ML Models for Smart Order Routing (SOR)</th>
     </tr>
     <tr>
-      <td>You want to evaluate a new mean-reversion strategy before deploying it to a live trading system.</td>
-      <td>You want to test how changes in market connectivity or order routing affect latency-sensitive strategies.</td>
-      <td>You want to train and evaluate a reinforcement learning model that makes real-time order placement decisions across multiple venues.</td>
+      <td style="vertical-align: top">You want to evaluate a new mean-reversion strategy before deploying it to a live trading system.</td>
+      <td style="vertical-align: top">You want to test how changes in market connectivity or order routing affect latency-sensitive strategies.</td>
+      <td style="vertical-align: top">You want to train and evaluate a reinforcement learning model that makes real-time order placement decisions across multiple venues.</td>
     </tr>
     <tr>
-      <td><b>How it works:</b>
+      <td style="vertical-align: top"><b>How it works:</b>
          <ul>
              <li>You write a trading algorithm using the simulator’s API.</li>
              <li>Historical market data (e.g., equities or FX tick data) is fed into the simulator.</li>
@@ -69,7 +69,7 @@ These features can be used in different trading and execution scenarios.
              <li>Performance metrics like PnL, Sharpe ratio, max drawdown, and trade volume are generated in real time.</li>
          </ul>
       </td>
-      <td><b>How it works:</b>
+      <td style="vertical-align: top"><b>How it works:</b>
          <ul>
              <li>The simulator recreates a high-frequency trading environment with configurable latency profiles, order book depth, and market microstructure.</li>
              <li>You simulate various network and co-location scenarios.</li>
@@ -77,7 +77,7 @@ These features can be used in different trading and execution scenarios.
              <li>The simulator provides logs and metrics for event timestamps, order acknowledgment latency, and execution time.</li>
          </ul>
       </td>
-      <td><b>How it works:</b>
+      <td style="vertical-align: top"><b>How it works:</b>
          <ul>
              <li>The simulator provides a multi-venue market with dynamic spreads, liquidity, and volatility.</li>
              <li>The RL agent interacts with the simulated market to place orders based on state features (e.g., LOB depth, time, last fill).</li>
@@ -87,13 +87,13 @@ These features can be used in different trading and execution scenarios.
       </td>
     </tr>
     <tr>
-      <td><b>Benefit:</b><br>
+      <td style="vertical-align: top"><b>Benefit:</b><br>
          Enables robust validation of trading strategies without the cost and risk of real-world execution.
       </td>
-      <td><b>Benefit:</b><br>
+      <td style="vertical-align: top"><b>Benefit:</b><br>
          Offers a safe and reproducible environment to optimize infrastructure for low-latency trading.
       </td>
-      <td><b>Benefit:</b><br>
+      <td style="vertical-align: top"><b>Benefit:</b><br>
          Enables AI model development for complex market environments without requiring proprietary exchange access or production-grade setups.
       </td>
     </tr>
@@ -267,21 +267,33 @@ reply Market data update:
 
 ## REST API requests examples
 
-The complete list of supported REST API request can be found in the [REST API documentation](https://quod-financial.github.io/quantreplay/RESTAPI/RESTAPI.html).
+The REST API is used to manage QuantReplay, listing, adding, and modifying data in the database.
+QuantReplay replies to REST API requests with JSON strings.
 
-Get list of venues:
+The complete list of supported REST API requests can be found in the [REST API documentation](https://quod-financial.github.io/quantreplay/RESTAPI/RESTAPI.html).
+
+The examples below show how to send REST API requests to the QuantReplay simulator using `curl` or `Invoke-RestMethod`
+(PowerShell):
+* Get list of venues:
 ```
 curl -X GET "http://localhost:9050/api/venues"
 ```
-
-Get list of instruments:
+```powershell
+Invoke-RestMethod -Uri "http://localhost:9050/api/venues" -Method GET | ConvertTo-Json -Depth 100
+```
+* Get list of instruments:
 ```
 curl -X GET "http://localhost:9050/api/listings"
 ```
-
-Get the status of QuantReplay:
+```powershell
+Invoke-RestMethod -Uri "http://localhost:9050/api/listings" -Method GET | ConvertTo-Json -Depth 100
+```
+* Get the status of QuantReplay:
 ```
 curl -X GET "http://localhost:9050/api/venuestatus"
+```
+```powershell
+Invoke-RestMethod -Uri "http://localhost:9050/api/venuestatus" -Method GET | ConvertTo-Json -Depth 100
 ```
 
 ## Community Support
