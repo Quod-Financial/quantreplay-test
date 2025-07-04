@@ -19,12 +19,18 @@
 !CMakePresets.json
 !README.md
 
+!**.adoc
+!**.bat
 !**.cmake
 !**.cpp
 !**.Dockerfile
 !**.err
 !**.hpp
+!**.html
+!**.ico
 !**.json
+!**.odt
+!**.pdf
 !**.png
 !**.properties
 !**.py
